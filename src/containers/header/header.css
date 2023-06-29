@@ -1,0 +1,123 @@
+.header {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background:-moz-radial-gradient(circle at 3% 25%, rgba(76, 175, 80, 1) 0%, rgba(8, 45, 53, 1) 100%);
+  background:-webkit-radial-gradient(circle at 3% 25%, rgba(76, 175, 80, 1) 0%, rgba(8, 45, 53, 1) 100%);
+  background:-o-radial-gradient(circle at 3% 25%, rgba(76, 175, 80, 1) 0%, rgba(8, 45, 53, 1) 100%);
+  background:-ms-radial-gradient(circle at 3% 25%, rgba(76, 175, 80, 1) 0%, rgba(8, 45, 53, 1) 100%);
+  background:radial-gradient(circle at 3% 25%, rgba(76, 175, 80, 1) 0%, rgba(8, 45, 53, 1) 100%);
+}
+
+@media (max-width: 1024px) {
+  .header{
+    padding: 160px 0 100px 0;
+  }
+}
+@media (max-width: 425px) {
+  .header{
+    padding: 110px 0 80px 0;
+  }
+}
+
+.header .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(106, 222, 18, 0.5) -5.91%, rgb(0, 97, 65) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+@media (max-width: 1024px) {
+  .header .tagline {
+  padding: 4px 5px;
+  font-size: 12px;
+  margin-bottom: 16px;
+  }
+}
+.header h1 {
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .header h1 {
+    font-size: 25px;
+  }
+}
+.header p {
+  color: #efe9f2;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+@media (max-width: 768px) {
+  .header p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  .header p {
+    font-size: 12px;
+  }
+}
+.header button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.header button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.header button:hover svg {
+  margin-left: 25px;
+}
+.header img {
+  animation: updown 3s linear infinite;
+}
+@media (max-width: 767px) {
+  .header img {
+    width:40%;
+    display: block;
+    margin: -80px 0 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  @keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+  }
+}
+
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
