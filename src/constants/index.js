@@ -1,7 +1,7 @@
 import {
   codeSlash,
   layoutTextWindow,
-  onsen,
+  comingSoon,
   mTravel
 } from "../assets";
 
@@ -63,9 +63,9 @@ const skills = [
 ];
 const projects = [
   {
-    name: "Onsenアプリ",
+    name: "Next.jsを使用したアプリ",
     description:
-      "海外旅行客向けの温泉アプリ。自分が行った温泉について感想を投稿したり、タグやワードで検索できます",
+      "アプリ開発中",
     tags: [
       {
         name: "react",
@@ -80,7 +80,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: onsen,
+    image: comingSoon,
     source_code_link: "https://github.com/marinayam/",
     demo_link:"https://github.com/marinayam/",
   },
