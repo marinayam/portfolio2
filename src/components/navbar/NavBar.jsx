@@ -9,6 +9,8 @@ import './navbar.css';
   const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, seScrolled ] =useState(false);
+  const [expanded, setExpanded] = useState(false);
+
 
   // スクロールで背景色を表示
   useEffect(() => {
@@ -31,7 +33,8 @@ import './navbar.css';
 
   return (
     <Router>
-      <Navbar expand="lg" className={scrolled ? 'scrolled' : ''} >
+      <Navbar expand="lg" className={scrolled ? 'scrolled' : ''} 
+      collapseOnSelect expanded={expanded} onToggle={() => setExpanded(!expanded)}>
         <Container className='navbar__container'>
           <Navbar.Brand href="#home">
             <img src={logo} alt="Logo" />
@@ -42,11 +45,17 @@ import './navbar.css';
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
-              onclick={() => onUpdateActiveLink('skills')}>
+              onClick={() => {
+                setExpanded(false); // navbar閉じる
+                onUpdateActiveLink('skills');
+              }}>
                 Skills
               </Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
-              onclick={() => onUpdateActiveLink('projects')} >
+              onClick={() => {
+                setExpanded(false); // navbar閉じる
+                onUpdateActiveLink('projects');
+              }}>
                 Projects
               </Nav.Link>
             </Nav> 
