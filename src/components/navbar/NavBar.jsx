@@ -60,11 +60,15 @@ import './navbar.css';
               </Nav.Link>
             </Nav> 
             <span className='navbar-text'>
-              <div className='social-icon'>
+              <div className='social-icon' onClick={() => {setExpanded(false); // navbar閉じる
+              }}>
                 <a href='https://github.com/marinayam?tab=repositories'  target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt='' /></a>
               </div>
               <HashLink to='#contact'>
-                <button><span>contact</span></button>
+                <button onClick={() => {setExpanded(false); // navbar閉じる
+                }}>
+                  <span>contact</span>
+                </button>
               </HashLink>
             </span>
           </Navbar.Collapse>
