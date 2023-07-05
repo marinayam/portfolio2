@@ -81,7 +81,7 @@ const projects = [
       },
     ],
     image: showcase,
-    source_code_link: "https://github.com/marinayam/",
+    source_code_link: "https://github.com/marinayam/showcase",
     demo_link:"https://showcase-pi-eight.vercel.app/",
   },
   {
