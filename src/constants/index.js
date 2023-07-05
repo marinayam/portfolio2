@@ -1,7 +1,7 @@
 import {
   codeSlash,
   layoutTextWindow,
-  comingSoon,
+  showcase,
   mTravel
 } from "../assets";
 
@@ -63,9 +63,9 @@ const skills = [
 ];
 const projects = [
   {
-    name: "Next.jsを使用したアプリ",
+    name: "Showcase",
     description:
-      "アプリ開発中",
+      "美容関係者の為の、実績を共有したり、検索してアイディアを得たり、ビジネスを広げるためのコミュニティアプリです",
     tags: [
       {
         name: "react",
@@ -80,9 +80,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: comingSoon,
+    image: showcase,
     source_code_link: "https://github.com/marinayam/",
-    demo_link:"https://github.com/marinayam/",
+    demo_link:"https://showcase-pi-eight.vercel.app/",
   },
   {
     name: "mTravel",

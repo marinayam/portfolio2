@@ -6,7 +6,7 @@ import codeSlash from "./code-slash.svg";
 import layoutTextWindow from "./layout-text-window.svg";
 import mTravel from "./mTravel.png";
 import comingSoon from "./comingSoon.png";
-
+import showcase from "./showcase.png";
 
 
 export {
@@ -18,4 +18,5 @@ export {
   layoutTextWindow,
   mTravel,
   comingSoon,
+  showcase,
 };
