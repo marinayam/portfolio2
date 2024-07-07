@@ -1,14 +1,9 @@
-import {
-  codeSlash,
-  layoutTextWindow,
-  showcase,
-  mTravel
-} from "../assets";
+import { codeSlash, layoutTextWindow, showcase, mTravel } from "../assets";
 
 const skills = [
   {
-    image:codeSlash,
-    title:"Web Engineer",
+    image: codeSlash,
+    title: "Web Engineer",
     features_title: "Language",
     experience: "HTML, CSS, Javascript,PHP, SQL",
     features_subtitle: "flamework,Tools",
@@ -40,11 +35,11 @@ const skills = [
     ],
   },
   {
-    image:layoutTextWindow,
-    title:"Web Designer",
-    features_title:"Experience",
+    image: layoutTextWindow,
+    title: "Web Designer",
+    features_title: "Experience",
     experience: "UX, UI, Web,Thumbnail",
-    features_subtitle:"Tools",
+    features_subtitle: "Tools",
     tools: [
       {
         name: "Figma",
@@ -82,7 +77,7 @@ const projects = [
     ],
     image: showcase,
     source_code_link: "https://github.com/marinayam/showcase",
-    demo_link:"https://showcase-pi-eight.vercel.app/",
+    demo_link: "https://github.com/marinayam/showcase",
   },
   {
     name: "mTravel",
@@ -104,7 +99,7 @@ const projects = [
     ],
     image: mTravel,
     source_code_link: "https://github.com/marinayam/responsive_react",
-    demo_link:"https://marinayam.github.io/responsive_react",
+    demo_link: "https://marinayam.github.io/responsive_react",
   },
 ];
 export { skills, projects };
