@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import {Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
-import './contact.css';
+import "./contact.css";
 
 const Contact = () => {
   const formRef = useRef();
@@ -25,6 +25,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      alert("全ての項目を入力してください。");
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -75,47 +80,43 @@ const Contact = () => {
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className='contact__form'
+                className="contact__form"
               >
-                <label className='contact__form-item'>
-                  <span className='contact__form-title'>Name</span>
+                <label className="contact__form-item">
+                  <span className="contact__form-title">Name</span>
                   <input
-                    type='text'
-                    name='name'
+                    type="text"
+                    name="name"
                     value={form.name}
                     onChange={handleChange}
                     placeholder="山田花子"
-                    className='contact__form-inputBox'
+                    className="contact__form-inputBox"
                   />
                 </label>
-                <label className='contact__form-item'>
-                  <span className='contact__form-title'>Your email</span>
+                <label className="contact__form-item">
+                  <span className="contact__form-title">Your email</span>
                   <input
-                    type='email'
-                    name='email'
+                    type="email"
+                    name="email"
                     value={form.email}
                     onChange={handleChange}
                     placeholder="sample@sample.com"
-                    className='contact__form-inputBox'
+                    className="contact__form-inputBox"
                   />
                 </label>
-                <label className='contact__form-item'>
-                  <span className='contact__form-title'>Your Message</span>
+                <label className="contact__form-item">
+                  <span className="contact__form-title">Your Message</span>
                   <textarea
                     rows={7}
-                    name='message'
+                    name="message"
                     value={form.message}
                     onChange={handleChange}
-                    placeholder='お問い合わせ内容'
-                    className='contact__form-inputBox'
+                    placeholder="お問い合わせ内容"
+                    className="contact__form-inputBox"
                   />
                 </label>
 
-                <button
-                  type='submit'
-                >
-                  {loading ? "Sending..." : "Send"}
-                </button>
+                <button type="submit">{loading ? "Sending..." : "Send"}</button>
               </form>
             </div>
           </Col>
