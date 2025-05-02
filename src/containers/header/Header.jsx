@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import { headerImg } from "../../assets";
@@ -12,8 +12,9 @@ const Header = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["Frontend Engineer", "Web Designer"];
   const period = 2000;
+
+  const toRotate = useMemo(() => ["Frontend Engineer", "Web Designer"], []);
 
   const tick = useCallback(() => {
     let i = loopNum % toRotate.length;
